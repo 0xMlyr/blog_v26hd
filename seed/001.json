@@ -1,0 +1,8 @@
+{
+  "metadata": {
+    "date": "2026-11-13",
+    "title": "用 Cloudflare KV 搭一个极简博客",
+    "tags": ["cloudflare", "kv", "mvp"]
+  },
+  "article": "这是一篇用来验证渲染效果的示例文章。\n\n## 为什么是 KV\n\nCloudflare KV 的模型足够简单：一个 key 对应一个字符串 value。博客文章正好是只读、低频写入的内容，因此 map 结构非常合适。\n\n- key：文章编号，例如 `001`\n- value：包含 `metadata` 与 `article` 的 JSON\n- 前端：只负责列表和 Markdown 渲染\n\n## 一个代码块\n\n```js\nexport default {\n  async fetch(request, env) {\n    const page = await env.BLOG_KV.list();\n    const ids = page.keys.map((key) => key.name);\n    return Response.json({ ids });\n  },\n};\n```\n\n> MVP 的目标不是功能齐全，而是尽快验证数据流：KV → Worker API → 浏览器。\n\n## 下一步\n\n1. 接入真实文章数据\n2. 补充文章元信息展示\n3. 按需增加搜索、标签和分页\n"
+}

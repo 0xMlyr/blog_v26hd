@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文章</title>
+    <meta name="description" content="一个极简的 Markdown 博客">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body data-page="article">
+    <main class="page">
+      <nav class="back" aria-label="返回">
+        <a href="/">← 返回文章列表</a>
+      </nav>
+      <article class="article">
+        <header class="article-header">
+          <h1 id="article-title" hidden></h1>
+          <p id="article-meta" class="article-meta" hidden></p>
+        </header>
+        <div id="article-content" class="markdown-body">
+          <p class="status">加载中...</p>
+        </div>
+      </article>
+    </main>
+    <script src="/marked.js" defer></script>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

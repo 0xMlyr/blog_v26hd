@@ -1,0 +1,9 @@
+{
+  "metadata": {
+    "date": "2026-11-12",
+    "title": "Markdown 渲染检查清单",
+    "tags": ["markdown", "frontend"],
+    "author": "blog"
+  },
+  "article": "这篇文章集中检查基础 Markdown 元素。\n\n## 文本\n\n普通段落、**粗体**、*斜体*、~~删除线~~、`行内代码` 和 [链接](https://www.cloudflare.com/)。\n\n## 列表\n\n- 无序列表项\n- 第二项\n  - 嵌套项\n\n1. 有序列表\n2. 第二项\n\n## 引用\n\n> 先让最重要的路径跑通，再考虑排版细节。\n\n## 表格\n\n| 模块 | 技术 | 状态 |\n| --- | --- | --- |\n| 前端 | HTML + CSS + JS | 已完成 |\n| API | Cloudflare Workers | 已完成 |\n| 数据库 | Cloudflare KV | 已完成 |\n\n## 分隔线\n\n---\n\n最后一行。\n"
+}
