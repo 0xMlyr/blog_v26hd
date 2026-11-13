@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="/style.css">
   </head>
   <body data-page="list">
-    <main class="page">
-      <header class="site-header">
-        <h1 class="site-title">
+    <main class="home">
+      <section class="hero" aria-labelledby="site-title">
+        <h1 id="site-title" class="site-title">
           <span>不可言者当以缄默</span>
           <span class="site-title-separator" aria-hidden="true">丶</span>
           <span>心之所处即是乐园</span>
         </h1>
-      </header>
-      <section aria-labelledby="list-heading">
+        <a class="scroll-hint" href="#articles" aria-label="查看文章列表">↓</a>
+      </section>
+      <section id="articles" class="page list-section" aria-labelledby="list-heading">
         <h2 id="list-heading" class="sr-only">全部文章</h2>
         <p id="status" class="status">加载中...</p>
         <ul id="article-list" class="article-list" hidden></ul>
