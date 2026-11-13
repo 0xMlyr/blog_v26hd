@@ -9,4 +9,4 @@ directory = "./public"
 binding = "BLOG_KV"
 # Replace with the id printed by:
 #   npx wrangler kv namespace create BLOG_KV
-id = "00000000000000000000000000000000"
+id = "774d4b9ecf464e48bb7a7001f97d717b"
