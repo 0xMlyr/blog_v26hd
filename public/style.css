@@ -34,6 +34,10 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
   margin: 0;
   background: var(--bg);
   color: var(--text);
@@ -49,27 +53,40 @@ a {
 }
 
 .page {
+  flex: 1;
   width: min(100% - 2.5rem, var(--max-width));
   margin: 0 auto;
-  padding: 4rem 0 6rem;
+  padding: 4rem 0 3rem;
 }
 
 .site-header {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border);
+  text-align: center;
 }
 
-.site-header h1 {
+.site-title {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.55em;
+  max-width: 100%;
   margin: 0;
-  font-size: clamp(2rem, 5vw, 2.6rem);
-  line-height: 1.2;
-  letter-spacing: -0.03em;
+  font-size: clamp(1.3rem, 3.2vw, 2rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.03em;
 }
 
-.subtitle {
-  margin: 0.6rem 0 0;
+.site-title span {
+  white-space: nowrap;
+}
+
+.site-title-separator {
   color: var(--muted);
+  font-weight: 400;
 }
 
 .status {
@@ -299,6 +316,18 @@ a {
   border-top: 1px solid var(--border);
 }
 
+.site-footer {
+  padding: 0 1rem 1.5rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -318,6 +347,14 @@ a {
 
   .page {
     width: min(100% - 2rem, var(--max-width));
-    padding: 2.5rem 0 4rem;
+    padding: 2.5rem 0 2rem;
+  }
+
+  .site-title {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.12em;
+    font-size: clamp(1.2rem, 5.5vw, 1.6rem);
+    line-height: 1.45;
   }
 }
