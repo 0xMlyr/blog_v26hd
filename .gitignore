@@ -2,3 +2,5 @@ node_modules/
 .wrangler/
 .seed/
 .dev.vars
+blog_data/
+api.txt
