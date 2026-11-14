@@ -123,6 +123,30 @@ a {
   font-weight: 400;
 }
 
+.breathe {
+  color: #b3b3b3;
+  animation: breathe 2.4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    color: var(--bg);
+    text-shadow: none;
+  }
+
+  50% {
+    color: #b3b3b3;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.75);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breathe {
+    animation: none;
+  }
+}
+
 .status {
   margin: 0 0 1rem;
   color: var(--muted);
